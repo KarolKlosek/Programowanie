@@ -6,8 +6,8 @@ print("4 - Publius Vergilius Maro")
 
 choseeFile = input("Enter File Number: ")
 
-print(choseeFile)
-chosenFile = []
+choseeFile = int(choseeFile)
+
 
 
 if choseeFile == 1:
