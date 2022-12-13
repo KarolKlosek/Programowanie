@@ -7,16 +7,12 @@ print("4 - Publius Vergilius Maro")
 choseeFile = int(input("Enter File Number: "))
 
 if choseeFile == 1:
-    print("1")
     chosenFile = "FilesToRead/1.txt"
 elif choseeFile == 2:
-    print("2")
     chosenFile = "FilesToRead/2.txt"
 elif choseeFile == 3:
-    print("3")
     chosenFile = "FilesToRead/3.txt"
 elif choseeFile == 4:
-    print("4")
     chosenFile = "FilesToRead/4.txt"
 else:
     print("Wrong number")
