@@ -22,7 +22,7 @@ else:
     if yesNoForhandFile == "T":
         chosenFile = input("Enter WHOLE Path : ")
     else:
-        print ("Ok!")
+        print ("Sorry, but something is no yes")
 
 
 with open("{}".format(chosenFile), 'r') as fp:
