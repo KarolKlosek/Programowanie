@@ -1,3 +1,5 @@
+
+
 print("choose a file ")
 print("1 - Lorem Ipsum")
 print("2 - Gaius Iulius Gaii")
@@ -16,7 +18,7 @@ elif choseeFile == 4:
     chosenFile = "FilesToRead/4.txt"
 else:
     print("Wrong number")
-if chosenFile in range(5):
+if choseeFile in range(5):
     with open("{}".format(chosenFile), 'r') as fp:
         file = fp.readlines()
     nrLine = []
