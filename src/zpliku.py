@@ -19,17 +19,23 @@ elif choseeFile == 4:
 else:
     print("Wrong number")
 if choseeFile in range(5):
+
     with open("{}".format(chosenFile), 'r') as fp:
         file = fp.readlines()
-    nrLine = []
-    nrLine.append(int(input("Enter line number:")))
+    
+    nrLine = int(input("Enter line number:"))
+    nrLine = nrLine - 1 
     currentLine = []
     lenFile = len(file)
-    for i, line in enumerate (file):
-        if i in nrLine:
-            currentLine.append(line.strip())
-        elif i > lenFile:
-            break
-    print(nrLine, currentLine)
+    
+    if lenFile > nrLine + 1:
+        for i, line in enumerate (file):
+            if i == nrLine:
+                currentLine.append(line.strip())
+            elif i > lenFile:
+                break
+        print(currentLine)
+    else:
+        print("no lines")
 else:
     print ("no file")
