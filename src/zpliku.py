@@ -17,25 +17,28 @@ elif choseeFile == 3:
 elif choseeFile == 4:
     chosenFile = "FilesToRead/4.txt"
 else:
-    print("Wrong number")
-if choseeFile in range(5):
-
-    with open("{}".format(chosenFile), 'r') as fp:
-        file = fp.readlines()
-    
-    nrLine = int(input("Enter line number:"))
-    nrLine = nrLine - 1 
-    currentLine = []
-    lenFile = len(file)
-    
-    if lenFile > nrLine + 1:
-        for i, line in enumerate (file):
-            if i == nrLine:
-                currentLine.append(line.strip())
-            elif i > lenFile:
-                break
-        print(currentLine)
+    print("Wrong number !")
+    yesNoForhandFile = input(" Do u like enter your file ? [T/n]")
+    if yesNoForhandFile == "T":
+        chosenFile = input("Enter WHOLE Path : ")
     else:
-        print("no lines")
+        print ("Ok!")
+
+
+with open("{}".format(chosenFile), 'r') as fp:
+    file = fp.readlines()
+
+nrLine = int(input("Enter line number:"))
+nrLine = nrLine - 1 
+currentLine = []
+lenFile = len(file)
+
+if lenFile > nrLine + 1:
+    for i, line in enumerate (file):
+        if i == nrLine:
+            currentLine.append(line.strip())
+        elif i > lenFile:
+            break
+    print(currentLine)
 else:
-    print ("no file")
+    print("no lines")
