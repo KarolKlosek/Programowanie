@@ -16,16 +16,18 @@ elif choseeFile == 4:
     chosenFile = "FilesToRead/4.txt"
 else:
     print("Wrong number")
-
-with open("{}".format(chosenFile), 'r') as fp:
-    file = fp.readlines()
-nrLine = []
-nrLine.append(int(input("Enter line number:")))
-currentLine = []
-lenFile = len(file)
-for i, line in enumerate (file):
-    if i in nrLine:
-        currentLine.append(line.strip())
-    elif i > lenFile:
-        break
-print(nrLine, currentLine)
+if chosenFile in range(5):
+    with open("{}".format(chosenFile), 'r') as fp:
+        file = fp.readlines()
+    nrLine = []
+    nrLine.append(int(input("Enter line number:")))
+    currentLine = []
+    lenFile = len(file)
+    for i, line in enumerate (file):
+        if i in nrLine:
+            currentLine.append(line.strip())
+        elif i > lenFile:
+            break
+    print(nrLine, currentLine)
+else:
+    print ("no file")
