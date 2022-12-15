@@ -1,4 +1,4 @@
-from readLines import *
+from readLines import readLine
 
 print("choose a file ")
 print("1 - Lorem Ipsum")
