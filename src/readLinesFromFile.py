@@ -19,11 +19,11 @@ def readLine(numberFile):
 
 
     with open("{}".format(chosenFile), 'r') as fp:
-       global file
        file = fp.readlines()
 
     nrLine = int(input("Enter line number:"))
     nrLine = nrLine - 1 
+    global currentLine
     currentLine = []
     lenFile = len(file)
 

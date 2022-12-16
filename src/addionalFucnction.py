@@ -1,6 +1,5 @@
 import readLinesFromFile
 def letterCounter():
-
-    print(len(readLinesFromFile.file))
-
-  
+    sentence = readLinesFromFile.currentLine
+    print(sentence)
+    
