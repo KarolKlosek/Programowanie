@@ -17,9 +17,9 @@ def readLine(numberFile):
         else:
             print ("Sorry, but something is no yes")
 
-
     with open("{}".format(chosenFile), 'r') as fp:
-       file = fp.readlines()
+        global file
+        file = fp.readlines()
 
     nrLine = int(input("Enter line number:"))
     nrLine = nrLine - 1 
