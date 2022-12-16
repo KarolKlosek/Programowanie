@@ -1,5 +1,5 @@
-from readLines import readLine
-
+from readLinesFromFile import *
+from addionalFucnction import *
 print("choose a file ")
 print("1 - Lorem Ipsum")
 print("2 - Gaius Iulius Gaii")
@@ -9,3 +9,4 @@ print("4 - Publius Vergilius Maro")
 numberFile = int(input("Enter File Number: "))
 
 readLine(numberFile)
+letterCounter()

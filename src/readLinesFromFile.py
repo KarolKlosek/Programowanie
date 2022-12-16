@@ -1,4 +1,6 @@
 def readLine(numberFile):
+    global testTest
+    testTest = "Udalo Sie nice one"
     if numberFile == 1:
         chosenFile = "FilesToRead/1.txt"
     elif numberFile == 2:
@@ -17,7 +19,8 @@ def readLine(numberFile):
 
 
     with open("{}".format(chosenFile), 'r') as fp:
-        file = fp.readlines()
+       global file
+       file = fp.readlines()
 
     nrLine = int(input("Enter line number:"))
     nrLine = nrLine - 1 
